@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-11-23T16:06:01Z",
+  "k8s_version": "v1.35.0",
+  "minikube_version": "v1.39.0",
+  "docker_version": "29.0.1",
+  "cgroup": "cgroup2fs",
+  "host": "Windows 11 / WSL2 (i5-1235U, 10GB WSL2 RAM)",
+  "amendments": [
+    "F3 uses docker pause/unpause on minikube-m02 to preserve Minikube CNI state; app uses asyncio server with backlog=256."
+  ]
+}

@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mttr-app
+  namespace: mttr-lab
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mttr-app
+  template:
+    metadata:
+      labels:
+        app: mttr-app
+        profile: C2_F2
+    spec:
+      terminationGracePeriodSeconds: 5
+
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: mttr-app
+                topologyKey: kubernetes.io/hostname
+      volumes:
+        - name: fault-state
+          emptyDir: {}
+      containers:
+        - name: app
+          image: mttr-microservice:v2
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: fault-state
+              mountPath: /fault
+          ports:
+            - containerPort: 8080
+          env:
+            - name: POD_NAME
+              valueFrom: { fieldRef: { fieldPath: metadata.name } }
+            - name: POD_UID
+              valueFrom: { fieldRef: { fieldPath: metadata.uid } }
+            - name: NODE_NAME
+              valueFrom: { fieldRef: { fieldPath: spec.nodeName } }
+            - name: WORKING_SET_MB
+              value: "0"
+          resources:
+            requests: { cpu: "500m", memory: "512Mi" }
+            limits:   { cpu: "500m", memory: "512Mi" }
+          startupProbe:
+            httpGet: { path: /healthz/startup, port: 8080 }
+            periodSeconds: 2
+            failureThreshold: 30
+          readinessProbe:
+            httpGet: { path: /healthz/ready, port: 8080 }
+            periodSeconds: 1
+            timeoutSeconds: 1
+            failureThreshold: 2
+          livenessProbe:
+            httpGet: { path: /healthz/live, port: 8080 }
+            periodSeconds: 5
+            timeoutSeconds: 1
+            failureThreshold: 3

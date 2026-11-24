@@ -1,0 +1,2 @@
+trial,cell,target_pod,recovered_pod,tti_es_s,tti_last_req_s,ttr_service_s,t5_ready_s,ttr_instance_s,restarts,oom_killed,valid,notes
+1,C2_F2b,mttr-app-7d5d4d67b-7zcmq,mttr-app-7d5d4d67b-7zcmq,4.887,1.356,3.895,18.73,18.769,1,1,1,ok

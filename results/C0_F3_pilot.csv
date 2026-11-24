@@ -1,0 +1,15 @@
+trial,cell,target_pod,recovered_pod,tti_es_s,tti_last_req_s,ttr_service_s,t5_ready_s,ttr_instance_s,restarts,oom_killed,valid,notes
+1,C0_F3,,,,,,,,,,0,Gate 5 failed: 81 non-200 responses during steady-state check
+2,C0_F3,,,,,,,,,,0,Gate 5 failed: 8 non-200 responses during steady-state check
+3,C0_F3,,,,,,,,,,0,Gate 5 failed: 14 non-200 responses during steady-state check
+4,C0_F3,mttr-app-fc5b97756-5dm2v,mttr-app-fc5b97756-t66sw,38.747,0.0,80.029,367.696,367.729,0,0,1,ok
+5,C0_F3,,,,,,,,,,0,Gate 5 failed: 9 non-200 responses during steady-state check
+6,C0_F3,,,,,,,,,,0,Gate 5 failed: 21 non-200 responses during steady-state check
+7,C0_F3,,,,,,,,,,0,Gate 5 failed: 26 non-200 responses during steady-state check
+8,C0_F3,mttr-app-fc5b97756-v87xf,mttr-app-fc5b97756-4zzk2,46.253,0.013,60.873,374.973,375.873,0,0,1,ok
+9,C0_F3,,,,,,,,,,0,Gate 5 failed: 14 non-200 responses during steady-state check
+10,C0_F3,,,,,,,,,,0,Gate 5 failed: 25 non-200 responses during steady-state check
+11,C0_F3,,,,,,,,,,0,Gate 5 failed: 1 non-200 responses during steady-state check
+12,C0_F3,mttr-app-fc5b97756-8sbqz,mttr-app-fc5b97756-jmrqh,39.093,0.018,55.458,367.598,367.657,0,0,1,ok
+13,C0_F3,,,,,,,,,,0,Gate 5 failed: 17 non-200 responses during steady-state check
+14,C0_F3,mttr-app-fc5b97756-qvjqv,mttr-app-fc5b97756-8wrcn,34.815,0.0,35.358,362.994,363.517,0,0,1,ok

@@ -1,0 +1,16 @@
+trial,cell,target_pod,recovered_pod,tti_es_s,tti_last_req_s,ttr_service_s,t5_ready_s,ttr_instance_s,restarts,oom_killed,valid,notes
+1,C1_F1,mttr-app-848df5458f-66446,mttr-app-848df5458f-66446,3.645,0.703,3.503,22.488,22.503,1,0,1,ok
+2,C1_F1,,,,,,,,,,0,Gate 5 failed: 19 non-200 responses during steady-state check
+3,C1_F1,,,,,,,,,,0,Gate 5 failed: 12 non-200 responses during steady-state check
+4,C1_F1,,,,,,,,,,0,Gate 5 failed: 5 non-200 responses during steady-state check
+5,C1_F1,mttr-app-848df5458f-55996,mttr-app-848df5458f-55996,2.872,0.544,2.924,26.273,26.364,1,0,1,ok
+6,C1_F1,,,,,,,,,,0,Gate 5 failed: 9 non-200 responses during steady-state check
+7,C1_F1,mttr-app-848df5458f-zp6kb,mttr-app-848df5458f-zp6kb,4.254,0.67,3.871,26.273,26.31,1,0,1,ok
+8,C1_F1,,,,,,,,,,0,Gate 5 failed: 8 non-200 responses during steady-state check
+9,C1_F1,,,,,,,,,,0,Gate 5 failed: 3 non-200 responses during steady-state check
+10,C1_F1,mttr-app-848df5458f-hskrq,mttr-app-848df5458f-hskrq,2.782,0.318,2.999,23.606,23.719,1,0,1,ok
+11,C1_F1,,,,,,,,,,0,Gate 5 failed: 9 non-200 responses during steady-state check
+12,C1_F1,,,,,,,,,,0,Gate 5 failed: 7 non-200 responses during steady-state check
+13,C1_F1,,,,,,,,,,0,Gate 5 failed: 11 non-200 responses during steady-state check
+14,C1_F1,,,,,,,,,,0,Gate 5 failed: 15 non-200 responses during steady-state check
+15,C1_F1,mttr-app-848df5458f-9gtmc,mttr-app-848df5458f-9gtmc,3.008,0.74,3.061,28.663,28.74,1,0,1,ok
